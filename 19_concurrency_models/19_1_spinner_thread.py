@@ -46,6 +46,8 @@ def supervisor() -> int:  # <1>
     # create a new Thread
     spinner = Thread(target=spin, args=("thinking!", done))  # <3>
 
+    # Display the spinner object. The output is <Thread(Thread-1, initial)>,
+    # where initial is the state of the thread—meaning it has not started.
     print(f"spinner object: {spinner}")  # <4>
 
     # Start the spinner thread
